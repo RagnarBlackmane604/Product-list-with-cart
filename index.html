@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> 
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> 
+  </head>
+<body>
+<div class="container">
+  <div>
+    <h1>Desserts</h1>
+
+    <ul class="list">
+    <li data-id="1" class="product-item">
+        <div class="wrapper" data-id="1">
+        <div class="image-container">
+      <img src="assets/images/image-waffle-desktop.jpg" alt="Product 1" class="product-image">
+      <div class="add-to-cart-overlay">
+      <button class="add-to-cart" aria-label="Add Waffle with Berries to the cart" data-id="1">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+
+          <div class="inline-quantity-controls" style="display: none;">
+            <button class="minus" aria-label="Decrease quantity">−</button>
+            <span class="quantity">1</span>
+            <button class="plus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+    </div>
+
+      <p>Waffle</p>
+      <h5>Waffle with Berries</h5>
+      <p class="price">$6.50</p>
+      </div>
+      </li>
+    
+     <li data-id="2" class="product-item">
+      <div class="wrapper" data-id="2">
+      <div class="image-container">
+      <img src="assets/images/image-creme-brulee-desktop.jpg" alt="Product 2" class="product-image">
+      <div class="add-to-cart-overlay">
+      <button class="add-to-cart" aria-label="Add Crème Brûlée to the cart" data-id="2">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+        </button>
+
+      <div class="inline-quantity-controls" style="display: none;">
+            <button class="minus" aria-label="Decrease quantity">−</button>
+            <span class="quantity">1</span>
+            <button class="plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+  </div>
+      <p>Crème Brûlée</p>
+      <h5>Vanilla Bean Crème Brûlée</h5>
+      <p class="price">$7.00</p>
+          </li>
+        
+
+      
+      <li>
+      <div class="wrapper" data-id="3">
+        <div class="image-container">
+        <img src="assets/images/image-macaron-desktop.jpg" alt="Product 3" class="product-image">
+        <div class="add-to-cart-overlay">
+        <button class="add-to-cart" aria-label="Add Macarons to the cart" data-id="3">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">
+        Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+                  <button class="minus" aria-label="Decrease quantity">−</button>
+          <span class="quantity">1</span>
+          <button class="plus" aria-label="Increase quantity">+</button>
+         </div>
+        </div>
+      </div>
+
+      <p>Macaron</p>
+      <h5>Macaron Mix of Five</h5>
+      <p class="price">$8.00</p>
+      </li>
+    
+
+   
+      <li>
+        <div class="wrapper" data-id="4">
+          <div class="image-container">
+      <img src="assets/images/image-tiramisu-desktop.jpg" alt="Product 4" class="product-image">
+      <div class="add-to-cart-overlay">
+      <button class="add-to-cart" aria-label="Add Tiramisu to the cart" data-id="4">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+          <button class="minus" aria-label="Decrease quantity">−</button>
+            <span class="quantity">1</span>
+            <button class="plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+  </div>
+      <p>Tiramisu</p>
+      <h5>Classic Tiramisu</h5>
+      <p class="price">$5.50</p>
+     </li>
+    
+
+    
+      <li>
+        <div class="wrapper" data-id="5">
+          <div class="image-container">
+      <img src="assets/images/image-baklava-desktop.jpg" alt="Product 5" class="product-image">
+      <div class="add-to-cart-overlay">
+      <button class="add-to-cart" aria-label="Add Baklava to the cart" data-id="5">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+          <button class="minus" aria-label="Decrease quantity">−</button>
+          <span class="quantity">1</span>
+          <button class="plus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>
+</div>
+      <p>Baklava</p>
+      <h5>Pistachio Baklava</h5>
+      <p class="price">$4.00</p>
+      </li>
+    
+      
+    
+      <li>
+      <div class="wrapper" data-id="6">
+        <div class="image-container">
+        <img src="assets/images/image-meringue-desktop.jpg" alt="Product 6" class="product-image">
+        <div class="add-to-cart-overlay">
+        <button class="add-to-cart" aria-label="Lemon Meringue Pie to the cart" data-id="6">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+        <button class="minus" aria-label="Decrease quantity">−</button>
+          <span class="quantity">1</span>
+          <button class="plus" aria-label="Increase quantity">+</button>
+    </div>    
+  </div>  
+</div>
+      <p>Pie</p>
+      <h5>Lemon Meringue Pie</h5>
+      <p class="price">$5.00</p>
+      </li>
+    
+
+    
+      <li>
+      <div class="wrapper" data-id="7">
+        <div class="image-container">
+        <img src="assets/images/image-cake-desktop.jpg" alt="Product 7" class="product-image">
+        <div class="add-to-cart-overlay">
+        <button class="add-to-cart" aria-label="Add Red Velvet Cake to the cart" data-id="7">
+          <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+          <button class="minus" aria-label="Decrease quantity">−</button>
+          <span class="quantity">1</span>
+          <button class="plus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>
+</div>
+      <p>Cake</p>
+      <h5>Red Velvet Cake</h5>
+      <p class="price">$5.50</p>
+      </li>
+    
+
+      
+    
+      <li>
+        <div class="wrapper" data-id="8">
+          <div class="image-container">
+      <img src="assets/images/image-brownie-desktop.jpg" alt="Product 8" class="product-image">
+      <div class="add-to-cart-overlay">
+      <button class="add-to-cart" aria-label="Add Brownies to the cart" data-id="8">
+        <span class="default-text"></span>
+        <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+      </button>
+      <div class="inline-quantity-controls" style="display: none;">
+          <button class="minus" aria-label="Decrease quantity">−</button>
+          <span class="quantity">1</span>
+          <button class="plus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>
+</div>
+      <p>Brownie</p>
+      <h5>Salted Caramel Brownie</h5>
+      <p class="price">$4.50</p>
+      </li>
+      
+
+      
+      <li>
+      <div class="wrapper" data-id="9">
+        <div class="image-container">
+        <img src="assets/images/image-panna-cotta-desktop.jpg" alt="Product 9" class="product-image">
+        <div class="add-to-cart-overlay">
+        <button class="add-to-cart" aria-label="Add Panna Cotta to the cart" data-id="9">
+          <span class="default-text"></span>
+          <img src="assets/images/icon-add-to-cart.svg" alt="Cart Icon">Add to cart
+        </button>
+        <div class="inline-quantity-controls" style="display: none;">
+            <button class="minus" aria-label="Decrease quantity">−</button>
+            <span class="quantity">1</span>
+            <button class="plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+  </div>
+        <p>Panna Cotta</p>
+      <h5>Vanilla Panna Cotta</h5>
+      <p class="price">$6.50</p>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="cart">
+  <h3>Your Cart (0)</h3> 
+  <img id="empty-cart-image" src="assets/images/illustration-empty-cart.svg" alt="Your cart is empty">
+  <p>Your added items will appear here</p>
+  <ul id="cart-items"></ul>
+            <div class="cart-actions">
+                <button id="confirm-order" class="button" aria-label="Confirm order">Confirm Order</button>
+            </div>
+  </div>
+</div>
+
+<div id="confirmation-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <img id="order-confirmed" src="assets/images/icon-order-confirmed.svg" alt="order confirmed">  
+    <h1>Order Confirmed</h1>
+      <p>We hope you enjoy your food!</p>
+      <ul id="order-items-list">
+      </ul>
+      <div id="order-total">
+      </div>
+      <!-- <button id="close-modal" class="button">Close</button> -->
+      <button id="start-new-order" class="button" aria-label="Start a new order">Start New Order</button>
+  </div>
+</div>
+
+</div>
+ 
+
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Fabian Bencinic</a>.
+</div> -->
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
