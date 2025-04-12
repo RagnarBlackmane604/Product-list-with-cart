@@ -4,55 +4,55 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       name: "Waffle with Berries",
       price: 6.5,
-      imageUrl: "assets/images.waffle jpg",
+      imageUrl: "./assets/images/image-waffle-thumbnail.jpg",
     },
     {
       id: 2,
       name: "Vanilla Bean Crème Brûlée",
       price: 7.0,
-      imageUrl: "path/to/image2.jpg",
+      imageUrl: "./assets/images/image-creme-brulee-thumbnail.jpg",
     },
     {
       id: 3,
       name: "Macaron Mix of Five",
       price: 8.0,
-      imageUrl: "path/to/image3.jpg",
+      imageUrl: "./assets/images/image-macaron-thumbnail.jpg",
     },
     {
       id: 4,
       name: "Classic Tiramisu",
       price: 5.5,
-      imageUrl: "path/to/image4.jpg",
+      imageUrl: "./assets/images/image-tiramisu-thumbnail.jpg",
     },
     {
       id: 5,
       name: "Pistachio Baklava",
       price: 4.0,
-      imageUrl: "path/to/image5.jpg",
+      imageUrl: "./assets/images/image-baklava-thumbnail.jpg",
     },
     {
       id: 6,
       name: "Lemon Meringue Pie",
       price: 5.0,
-      imageUrl: "path/to/image6.jpg",
+      imageUrl: "./assets/images/image-meringue-thumbnail.jpg",
     },
     {
       id: 7,
       name: "Red Velvet Cake",
       price: 5.5,
-      imageUrl: "path/to/image7.jpg",
+      imageUrl: "./assets/images/image-cake-thumbnail.jpg",
     },
     {
       id: 8,
       name: "Salted Caramel Brownie",
       price: 4.5,
-      imageUrl: "path/to/image8.jpg",
+      imageUrl: "./assets/images/image-brownie-thumbnail.jpg",
     },
     {
       id: 9,
       name: "Vanilla Panna Cotta",
       price: 6.5,
-      imageUrl: "path/to/image9.jpg",
+      imageUrl: ".assets/images/image-panna-cotta-thumbnail.jpg",
     },
   ];
 
@@ -354,10 +354,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const emptyCartImage = document.getElementById("empty-cart-image");
 
     if (items.length === 0) {
-      const emptyMessage = document.createElement("p");
-      emptyMessage.textContent = "Your added items will appear here";
-      cartItemsList.appendChild(emptyMessage);
-
       cartTitle.innerHTML = "Your Cart (0)";
       emptyCartImage.style.display = "block";
       return;
@@ -423,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     orderTotal.textContent = `Total: $${getTotalPrice().toFixed(2)}`;
 
-    modal.style.display = "block";
+    modal.style.display = "flex";
     modal.setAttribute("aria-modal", "true");
     modal.setAttribute("role", "dialog");
   });
